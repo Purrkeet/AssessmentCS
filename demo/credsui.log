@@ -1,4 +1,6 @@
 /*C12*/SET SCHEMA PUBLIC
+drop table if exists event CASCADE 
+create table event (event_id varchar(255) not null, event_alert boolean, event_duration bigint, event_host varchar(255), event_type varchar(255), primary key (event_id))
 INSERT INTO EVENT VALUES('scsmbstgra',TRUE,5,'12345','APPLICATION_LOG')
 COMMIT
 INSERT INTO EVENT VALUES('scsmbstgrc',TRUE,8,NULL,NULL)
